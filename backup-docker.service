@@ -1,0 +1,9 @@
+[Unit]
+Description=Backup diario de contenedores, volúmenes y stacks Docker
+After=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/scripts/backup_docker.sh
+User=root
+TimeoutStartSec=3600
