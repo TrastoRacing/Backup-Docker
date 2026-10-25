@@ -1,0 +1,10 @@
+[Unit]
+Description=Ejecuta backup-docker.service todos los días a las 04:00
+
+[Timer]
+OnCalendar=*-*-* 04:00:00
+Persistent=true
+RandomizedDelaySec=0
+
+[Install]
+WantedBy=timers.target
