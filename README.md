@@ -9,7 +9,7 @@ Script en Bash para realizar un respaldo de un entorno Docker.
 - /etc/systemd/system/backup-docker.service
 - /etc/systemd/system/backup-docker.timer
 
-3. Recarga systemd para que detecte los nuevos archivos
+2. Recarga systemd para que detecte los nuevos archivos
 ```bash
 sudo systemctl daemon-reload
 ```
@@ -20,12 +20,12 @@ sudo systemctl enable backup-docker.timer
 sudo systemctl start backup-docker.timer
 ```
 
-5. Verificar el timer
+4. Verificar el timer
 ```bash
 systemctl list-timers backup-docker.timer
 ```
 
-6. Revisar logs del propio timer
+5. Revisar logs del propio timer
 ```bash
 sudo journalctl -u backup-docker.service
 ```
